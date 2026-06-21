@@ -1,0 +1,192 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   ZIFARAA TIMEPIECES — Animations & Keyframes
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Loader bar fill ── */
+@keyframes loaderFill {
+  0%   { transform: scaleX(0); transform-origin: left; }
+  100% { transform: scaleX(1); transform-origin: left; }
+}
+
+/* ── Loader brand char reveal ── */
+@keyframes loaderChar {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+
+/* ── Badge pop ── */
+@keyframes badgePop {
+  0%   { transform: scale(1); }
+  35%  { transform: scale(1.55); }
+  65%  { transform: scale(0.88); }
+  100% { transform: scale(1); }
+}
+
+.badge--pop {
+  animation: badgePop 0.38s var(--ease-reveal) both;
+}
+
+/* ── Toast (mobile slide up) ── */
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Page enter ── */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Hero eyebrow/sub pulse (very subtle, once) ── */
+@keyframes subtleFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Reveal utility classes ──
+   GSAP animates FROM these states TO their natural state.
+   These are the initial hidden states; GSAP resolves them. ── */
+
+.reveal-fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: opacity, transform;
+}
+
+.reveal-slide-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  will-change: opacity, transform;
+}
+
+.reveal-slide-right {
+  opacity: 0;
+  transform: translateX(30px);
+  will-change: opacity, transform;
+}
+
+.reveal-scale-up {
+  opacity: 0;
+  transform: scale(0.95);
+  will-change: opacity, transform;
+}
+
+.reveal-clip {
+  clip-path: inset(100% 0 0 0);
+  will-change: clip-path;
+}
+
+.reveal-stagger-up {
+  opacity: 0;
+  transform: translateY(24px);
+  will-change: opacity, transform;
+}
+
+.reveal-rotate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  will-change: opacity, transform;
+}
+
+/* Revealed state (GSAP sets inline styles — these are for no-JS fallback) */
+.no-js .reveal-fade-up,
+.no-js .reveal-slide-left,
+.no-js .reveal-slide-right,
+.no-js .reveal-scale-up,
+.no-js .reveal-stagger-up,
+.no-js .reveal-rotate-in {
+  opacity: 1;
+  transform: none;
+}
+
+.no-js .reveal-clip {
+  clip-path: inset(0% 0 0 0);
+}
+
+/* ── Hero background parallax helper ── */
+.hero__bg {
+  will-change: transform;
+}
+
+/* ── Star reveal (testimonials) ── */
+.star {
+  display: inline-block;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.star.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* ── Mobile performance — reduce GPU/battery usage ── */
+@media (max-width: 768px) {
+  .reveal-fade-up,
+  .reveal-slide-left,
+  .reveal-slide-right,
+  .reveal-scale-up,
+  .reveal-stagger-up,
+  .reveal-rotate-in,
+  .reveal-clip {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    will-change: auto;
+  }
+
+  .hero__bg {
+    will-change: auto;
+  }
+
+  .star {
+    opacity: 1;
+    transform: none;
+  }
+
+  .view-page .product-card,
+  .view-page .brand-card,
+  .view-page .service-card {
+    animation: none;
+  }
+}
+
+/* ── Prefers reduced motion — zero out everything ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-delay: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    transition-delay: 0.001ms !important;
+  }
+
+  /* Un-hide reveal elements instantly */
+  .reveal-fade-up,
+  .reveal-slide-left,
+  .reveal-slide-right,
+  .reveal-scale-up,
+  .reveal-stagger-up,
+  .reveal-rotate-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .reveal-clip {
+    clip-path: inset(0% 0 0 0) !important;
+  }
+
+  .star {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero__bg {
+    will-change: auto;
+  }
+
+}

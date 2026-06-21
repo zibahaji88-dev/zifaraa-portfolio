@@ -1,0 +1,264 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   ZIFARAA TIMEPIECES — RTL overrides
+   Applied when dir="rtl" is set on <html> (Arabic / Persian).
+   All values use existing tokens — no raw colours or sizes here.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Navigation ── */
+[dir="rtl"] .nav__links {
+  margin-inline-start: 0;
+  margin-inline-end: auto;
+}
+
+[dir="rtl"] .nav__actions {
+  margin-inline-start: 0;
+  margin-inline-end: var(--sp-6);
+}
+
+[dir="rtl"] .nav__link::after {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+
+/* ── Mobile menu ── */
+[dir="rtl"] .mobile-menu {
+  transform: translateX(-100%);
+}
+
+[dir="rtl"] .mobile-menu--open {
+  transform: translateX(0);
+}
+
+/* ── Hero ── */
+[dir="rtl"] .hero__content {
+  text-align: right;
+}
+
+[dir="rtl"] .hero__word--indent {
+  padding-inline-start: 0;
+  padding-inline-end: 0.12em;
+}
+
+[dir="rtl"] .hero__cta-wrap {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+/* ── Section text alignment ── */
+[dir="rtl"] .section-label,
+[dir="rtl"] .section-heading,
+[dir="rtl"] .section-body,
+[dir="rtl"] .craft-note {
+  text-align: right;
+}
+
+/* ── Product card ── */
+[dir="rtl"] .product-card__badge {
+  inset-inline-start: auto;
+  inset-inline-end: var(--sp-4);
+}
+
+[dir="rtl"] .product-card__wish {
+  inset-inline-end: auto;
+  inset-inline-start: var(--sp-4);
+}
+
+[dir="rtl"] .product-card__name::after {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+
+[dir="rtl"] .product-card__meta,
+[dir="rtl"] .product-card__body {
+  text-align: right;
+}
+
+/* ── Collection card ── */
+[dir="rtl"] .collection-card__body {
+  text-align: right;
+}
+
+/* ── Testimonials ── */
+[dir="rtl"] .testimonial-stars {
+  direction: rtl;
+}
+
+[dir="rtl"] .testimonial-footer,
+[dir="rtl"] .testimonial-quote {
+  text-align: right;
+}
+
+/* ── Forms ── */
+[dir="rtl"] .form-label {
+  text-align: right;
+}
+
+[dir="rtl"] select.form-input {
+  background-position: left var(--sp-4) center;
+  padding-inline-end: var(--sp-5);
+  padding-inline-start: var(--sp-10);
+}
+
+[dir="rtl"] .form-error {
+  text-align: right;
+}
+
+/* ── Footer ── */
+[dir="rtl"] .footer-inner {
+  direction: rtl;
+}
+
+[dir="rtl"] .footer-col__link:hover {
+  padding-inline-start: 0;
+  padding-inline-end: var(--sp-2);
+}
+
+[dir="rtl"] .footer-social {
+  direction: rtl;
+}
+
+[dir="rtl"] .footer-bottom {
+  direction: rtl;
+}
+
+/* ── Modal ── */
+[dir="rtl"] .modal__close {
+  inset-inline-end: auto;
+  inset-inline-start: var(--sp-5);
+}
+
+[dir="rtl"] .modal__meta,
+[dir="rtl"] .modal__name,
+[dir="rtl"] .modal__desc {
+  text-align: right;
+}
+
+[dir="rtl"] .modal__spec-val {
+  text-align: start;
+}
+
+[dir="rtl"] .modal__gallery-thumbs {
+  direction: rtl;
+}
+
+/* ── Checkout steps ── */
+[dir="rtl"] .checkout-steps {
+  direction: rtl;
+}
+
+[dir="rtl"] .checkout-layout {
+  direction: rtl;
+}
+
+/* ── Cart / Wishlist items ── */
+[dir="rtl"] .cart-item {
+  direction: rtl;
+}
+
+[dir="rtl"] .cart-item__price {
+  text-align: start;
+}
+
+[dir="rtl"] .cart-item__remove {
+  text-align: start;
+}
+
+/* ── Order summary ── */
+[dir="rtl"] .order-summary__row {
+  direction: rtl;
+}
+
+/* ── Auth ── */
+[dir="rtl"] .auth-tabs {
+  direction: rtl;
+}
+
+[dir="rtl"] .auth-tab {
+  padding-inline-end: var(--sp-8);
+  padding-inline-start: 0;
+}
+
+/* ── Stat numbers ── */
+[dir="rtl"] .craft-stats {
+  direction: rtl;
+}
+
+[dir="rtl"] .stat-item {
+  text-align: right;
+}
+
+/* ── Craft split ── */
+[dir="rtl"] .craft-split {
+  direction: rtl;
+}
+
+/* ── About ── */
+[dir="rtl"] .about-inner {
+  direction: rtl;
+}
+
+[dir="rtl"] .about-text {
+  text-align: right;
+}
+
+/* ── Contact ── */
+[dir="rtl"] .contact-inner {
+  direction: rtl;
+}
+
+/* ── View pages ── */
+[dir="rtl"] .view-header,
+[dir="rtl"] .view-title {
+  text-align: right;
+}
+
+[dir="rtl"] .empty-state {
+  align-items: flex-end;
+}
+
+[dir="rtl"] .empty-state__title,
+[dir="rtl"] .empty-state__body {
+  text-align: right;
+}
+
+/* ── Nav badges ── */
+[dir="rtl"] .nav__badge {
+  inset-inline-end: auto;
+  inset-inline-start: 2px;
+}
+
+/* ── Qty control ── */
+[dir="rtl"] .qty-control {
+  direction: rtl;
+}
+
+/* ── Toast ── */
+[dir="rtl"] .toast-container {
+  inset-inline-end: auto;
+  inset-inline-start: var(--sp-8);
+}
+
+[dir="rtl"] .toast {
+  transform: translateX(-120%);
+}
+
+[dir="rtl"] .toast--visible {
+  transform: translateX(0);
+}
+
+/* ── Order confirmed ── */
+[dir="rtl"] .order-confirmed {
+  text-align: right;
+}
+
+/* ── Footer logo ── */
+[dir="rtl"] .footer-logo,
+[dir="rtl"] .nav__logo {
+  text-align: right;
+}
+
+/* ── Language letters: ensure EN/AR/FA display correctly ── */
+[dir="rtl"] .lang-btn,
+[dir="rtl"] .lang-switcher {
+  direction: ltr; /* Always LTR for language code labels */
+}

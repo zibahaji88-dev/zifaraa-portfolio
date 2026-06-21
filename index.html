@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ZIFARAA — Premium luxury watch marketplace. Curated timepieces from Rolex, Patek Philippe, Cartier, Hermès, Omega, Vacheron Constantin and Apple Watch.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="keywords" content="luxury watches, Rolex, Patek Philippe, Cartier, Hermès, Omega, Vacheron Constantin, Apple Watch, premium timepieces, watch marketplace">
+  <meta property="og:title" content="ZIFARAA — Premium Luxury Watch Marketplace">
+  <meta property="og:description" content="Curated timepieces from the world's most prestigious maisons. Rolex, Patek Philippe, Cartier, Hermès, Omega and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=1200&q=80&fm=webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ZIFARAA — Premium Luxury Watch Marketplace">
+  <meta name="twitter:description" content="Curated timepieces from the world's most prestigious maisons. Rolex, Patek Philippe, Cartier, Hermès, Omega and more.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=1200&q=80&fm=webp">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌚</text></svg>">
+  <link rel="canonical" href="">
+  <title>ZIFARAA — Premium Luxury Watch Marketplace</title>
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Latin: Cormorant Garamond + Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Arabic: Tajawal -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Persian: Vazirmatn -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS cascade -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <!-- RTL stylesheet — disabled by default, toggled by i18n.js -->
+  <link id="rtl-stylesheet" rel="stylesheet" href="css/rtl.css" disabled>
+</head>
+<body>
+
+  <!-- ── Loader ── -->
+  <div id="loader" role="status" aria-label="Loading ZIFARAA">
+    <div class="loader-brand" aria-hidden="true">
+      <span>Z</span><span>I</span><span>F</span><span>A</span><span>R</span><span>A</span><span>A</span>
+      <div class="loader-shimmer"></div>
+    </div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar" id="loader-bar"></div>
+    </div>
+    <div class="loader-percent" id="loader-percent" aria-hidden="true">0%</div>
+  </div>
+
+  <!-- ── Site Header (fixed, overlays all content) ── -->
+  <header id="site-header" class="site-header" role="banner">
+    <nav class="nav container" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="#/" class="nav__logo" aria-label="ZIFARAA — home">
+        <span class="nav__logo-text">ZIFARAA</span>
+        <span class="nav__logo-sub">TIMEPIECES</span>
+      </a>
+
+      <!-- Primary links -->
+      <ul class="nav__links" role="list">
+        <li class="nav__dropdown" data-dropdown>
+          <button class="nav__link nav__link--trigger" aria-expanded="false" aria-haspopup="true" data-i18n="nav.shop">Shop <svg class="nav__caret" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M1 1l4 4 4-4"/></svg></button>
+          <div class="mega-menu" role="menu" aria-hidden="true">
+            <div class="mega-menu__inner">
+              <div class="mega-menu__col">
+                <span class="mega-menu__label">By Category</span>
+                <a href="#/mens" class="mega-menu__link" role="menuitem" data-i18n="nav.mens">Men's Watches</a>
+                <a href="#/womens" class="mega-menu__link" role="menuitem" data-i18n="nav.womens">Women's Watches</a>
+                <a href="#/boys" class="mega-menu__link" role="menuitem" data-i18n="nav.boys">Boys' Watches</a>
+                <a href="#/girls" class="mega-menu__link" role="menuitem" data-i18n="nav.girls">Girls' Watches</a>
+              </div>
+              <div class="mega-menu__col">
+                <span class="mega-menu__label">Collections</span>
+                <a href="#/new-arrivals" class="mega-menu__link" role="menuitem" data-i18n="nav.new">New Arrivals</a>
+                <a href="#/limited-editions" class="mega-menu__link" role="menuitem" data-i18n="nav.limited">Limited Editions</a>
+                <a href="#/apple-watch" class="mega-menu__link" role="menuitem" data-i18n="nav.apple">Apple Watch</a>
+              </div>
+              <div class="mega-menu__col mega-menu__col--featured">
+                <span class="mega-menu__label">Featured</span>
+                <a href="#/brands/rolex" class="mega-menu__link" role="menuitem">Rolex</a>
+                <a href="#/brands/patek-philippe" class="mega-menu__link" role="menuitem">Patek Philippe</a>
+                <a href="#/brands/cartier" class="mega-menu__link" role="menuitem">Cartier</a>
+                <a href="#/brands/omega" class="mega-menu__link" role="menuitem">Omega</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#/brands" class="nav__link" data-i18n="nav.brands">Brands</a></li>
+        <li><a href="#/new-arrivals" class="nav__link" data-i18n="nav.new">New Arrivals</a></li>
+        <li><a href="#/services" class="nav__link" data-i18n="nav.services">Services</a></li>
+        <li><a href="#/about" class="nav__link" data-i18n="nav.about">About</a></li>
+        <li><a href="#/contact" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+
+      <!-- Right actions -->
+      <div class="nav__actions">
+        <!-- Language switcher -->
+        <div class="lang-switcher" role="navigation" aria-label="Language selection">
+          <button class="lang-btn lang-btn--active" data-lang="en" aria-label="English" aria-pressed="true">EN</button>
+          <span class="lang-divider" aria-hidden="true">|</span>
+          <button class="lang-btn" data-lang="ar" aria-label="Arabic — العربية" aria-pressed="false">AR</button>
+          <span class="lang-divider" aria-hidden="true">|</span>
+          <button class="lang-btn" data-lang="fa" aria-label="Persian — فارسی" aria-pressed="false">FA</button>
+        </div>
+
+        <!-- Wishlist -->
+        <a href="#/wishlist" class="nav__icon-btn" aria-label="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <span class="nav__badge" data-badge="wishlist" aria-live="polite" aria-label="0 items in wishlist">0</span>
+        </a>
+
+        <!-- Cart -->
+        <a href="#/cart" class="nav__icon-btn" aria-label="Shopping cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"/>
+            <circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+          <span class="nav__badge" data-badge="cart" aria-live="polite" aria-label="0 items in cart">0</span>
+        </a>
+
+        <!-- Account -->
+        <a href="#/auth" class="nav__icon-btn" aria-label="Sign in to your account" id="nav-auth-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </a>
+
+        <!-- Mobile menu toggle -->
+        <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu" id="nav-hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+      <ul class="mobile-menu__links" role="list">
+        <li class="mobile-menu__section-label">Shop</li>
+        <li><a href="#/mens" class="mobile-menu__link" data-i18n="nav.mens">Men's Watches</a></li>
+        <li><a href="#/womens" class="mobile-menu__link" data-i18n="nav.womens">Women's Watches</a></li>
+        <li><a href="#/boys" class="mobile-menu__link" data-i18n="nav.boys">Boys' Watches</a></li>
+        <li><a href="#/girls" class="mobile-menu__link" data-i18n="nav.girls">Girls' Watches</a></li>
+        <li class="mobile-menu__section-label">Discover</li>
+        <li><a href="#/brands" class="mobile-menu__link" data-i18n="nav.brands">Brands</a></li>
+        <li><a href="#/new-arrivals" class="mobile-menu__link" data-i18n="nav.new">New Arrivals</a></li>
+        <li><a href="#/limited-editions" class="mobile-menu__link" data-i18n="nav.limited">Limited Editions</a></li>
+        <li><a href="#/apple-watch" class="mobile-menu__link" data-i18n="nav.apple">Apple Watch</a></li>
+        <li><a href="#/services" class="mobile-menu__link" data-i18n="nav.services">Services</a></li>
+        <li class="mobile-menu__section-label">More</li>
+        <li><a href="#/about" class="mobile-menu__link" data-i18n="nav.about">About</a></li>
+        <li><a href="#/contact" class="mobile-menu__link" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="#/wishlist" class="mobile-menu__link" data-i18n="nav.wishlist">Wishlist</a></li>
+        <li><a href="#/cart" class="mobile-menu__link" data-i18n="nav.cart">Cart</a></li>
+        <li><a href="#/auth" class="mobile-menu__link" data-i18n="nav.login">Sign In</a></li>
+      </ul>
+      <div class="mobile-menu__lang">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ar">AR</button>
+        <button class="lang-btn" data-lang="fa">FA</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── SPA Root ── -->
+  <main id="app" role="main"></main>
+
+  <!-- ── Product Detail Modal ── -->
+  <div id="product-modal" class="modal" role="dialog" aria-modal="true" aria-label="Product details" aria-hidden="true">
+    <div class="modal__backdrop" id="modal-backdrop"></div>
+    <div class="modal__panel">
+      <button class="modal__close" id="modal-close" aria-label="Close product details">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div id="modal-content" class="modal__content"></div>
+    </div>
+  </div>
+
+  <!-- ── Toast notifications ── -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="false"></div>
+
+  <!-- ── Global config (override before loading app) ── -->
+  <script>
+    window.ZIFARAA_CONFIG = {
+      stripePublishableKey: null, // Set to real key to enable Stripe
+      debug: false
+    };
+  </script>
+
+  <!-- ── CDN Libraries ── -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+
+  <!-- ── App entry ── -->
+  <script src="js/app.js" defer></script>
+
+</body>
+</html>
